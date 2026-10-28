@@ -18,11 +18,14 @@ class GenderItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 155,
-        height: 180,
+        width: width * 0.05,
+        height: height * 0.21,
         margin: EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: isSelected

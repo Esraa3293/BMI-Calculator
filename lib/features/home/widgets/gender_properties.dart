@@ -20,9 +20,12 @@ class GenderProperties extends StatefulWidget {
 class _GenderPropertiesState extends State<GenderProperties> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
-      width: 155,
-      height: 180,
+      width: width * 0.05,
+      height: height * 0.21,
       margin: EdgeInsets.only(left: 8.0, right: 8.0, top: 16.0),
       decoration: BoxDecoration(
         color: Colors.grey.withValues(alpha: 0.3),

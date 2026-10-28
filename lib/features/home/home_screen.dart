@@ -2,8 +2,7 @@ import 'package:creativa3/core/colors_manager.dart';
 import 'package:creativa3/core/styles_manager.dart';
 import 'package:creativa3/core/widgets/header.dart';
 import 'package:creativa3/features/home/cubit/home_cubit.dart';
-import 'package:crea'
-    'tiva3/features/home/cubit/home_states.dart';
+import 'package:creativa3/features/home/cubit/home_states.dart';
 import 'package:creativa3/features/home/widgets/calculation.dart';
 import 'package:creativa3/features/home/widgets/gender_item.dart';
 import 'package:creativa3/features/home/widgets/gender_properties.dart';
@@ -15,6 +14,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return BlocConsumer<HomeCubit, HomeStates>(
       listener: (context, state) {
         if (state is HomeCalculateBmiState) {
@@ -53,8 +55,8 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               Container(
-                width: double.infinity,
-                height: 189,
+                width: width,
+                height: height * 0.3,
                 margin: EdgeInsets.only(left: 8.0, right: 8.0, top: 8.0),
                 decoration: BoxDecoration(
                   color: Colors.grey.withValues(alpha: 0.3),

@@ -11,6 +11,8 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var result = ModalRoute.of(context)?.settings.arguments as BmiResultModel;
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: ColorsManager.primaryColor,
@@ -24,8 +26,8 @@ class ResultScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                width: 319,
-                height: 503,
+                width: width * 0.3,
+                height: height * 0.6,
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
